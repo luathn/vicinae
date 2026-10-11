@@ -759,6 +759,8 @@ if (APPLE)
 		src/services/file-chooser/macos/mac-file-chooser.mm
 		src/services/menu-bar/macos-menu-bar.hpp
 		src/services/menu-bar/macos-menu-bar.mm
+		src/services/input-source/input-source.hpp
+		src/services/input-source/input-source-macos.mm
 		src/app-platform.hpp
 		src/app-platform-macos.mm
 		src/builtins/vicinae/menu-bar-search-view-host.hpp
@@ -790,6 +792,7 @@ if (APPLE)
 		src/services/desktop-notification/macos/macos-notification-client.mm
 		src/services/file-chooser/macos/mac-file-chooser.mm
 		src/services/menu-bar/macos-menu-bar.mm
+		src/services/input-source/input-source-macos.mm
 		src/app-platform-macos.mm
 		PROPERTIES COMPILE_OPTIONS "-fobjc-arc")
 	list(APPEND LIBS "-framework ServiceManagement" "-framework UserNotifications" "-framework ScriptingBridge")

@@ -5,6 +5,7 @@
 #include <qcolor.h>
 #include <qjsondocument.h>
 #include <unordered_map>
+#include <vector>
 #include "theme/colors.hpp"
 
 enum class ThemeVariant { Light, Dark };

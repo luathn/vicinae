@@ -32,6 +32,7 @@
 #include "service-registry.hpp"
 #include "services/app-service/app-service.hpp"
 #include "services/file-chooser/file-chooser-service.hpp"
+#include "services/input-source/input-source.hpp"
 #include "environment.hpp"
 #include "vicinae.hpp"
 #include "internal/keyboard/keyboard.hpp"
@@ -387,6 +388,7 @@ void LauncherWindow::handleVisibilityChanged(bool visible) {
     m_window->raise();
     LauncherWindowPlatform::grantForeground();
     m_window->requestActivate();
+    InputSource::launcherShown();
 #ifdef Q_OS_LINUX
     // layer-shell has its own focus mechanism, we don't need a token
     if (!isLayerShellActive()) { Wayland::XdgActivation::activateWindow(m_window); }
@@ -396,6 +398,7 @@ void LauncherWindow::handleVisibilityChanged(bool visible) {
     LauncherWindowPlatform::suppressHeldKeyReleases();
     if (m_dragOverlayVisible) endWindowDrag();
     m_window->hide();
+    InputSource::launcherHidden();
     updateWindowTitle();
   }
 }

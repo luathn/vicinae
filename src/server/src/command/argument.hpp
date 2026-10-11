@@ -1,5 +1,7 @@
 #pragma once
 #include <qstring.h>
+#include <optional>
+#include <vector>
 
 struct CommandArgument {
   enum Type { Text, Password, Dropdown };

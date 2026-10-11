@@ -2,6 +2,7 @@
 #include <QString>
 #include <map>
 #include <span>
+#include <vector>
 
 /**
  * A parsed placeholder string such as "Hi {first_name} {clipboard} {argument name="test"}
